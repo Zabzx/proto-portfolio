@@ -11,7 +11,6 @@
 }
 body {
     font-family: 'Ubuntu', sans-serif;
-    overflow-x: hidden;
 }
 /*Header*/
 .header-container {
@@ -28,7 +27,7 @@ body {
     border-bottom-left-radius: 30px;
     z-index: 1;
 }
-.header-flex {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,6 +70,8 @@ body {
 }
 .burger {
     display: none;
+    position: relative;
+    z-index: 5;
 }
 .burger .line {
     height: 5px;
@@ -149,8 +150,10 @@ body {
     position: relative;
     transition: 0.3s;
 }
-.project:hover {
-    transform: scale(1.1)
+@media (hover: hover){
+    .project:hover {
+        transform: scale(1.1)
+    }
 }
 .project h1 {
     text-align: center;
@@ -231,4 +234,112 @@ body {
 }
 .extra-info p {
     font-size: 20px;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 900px) {
+    html, body {
+        position: relative;
+        overflow-x: hidden;
+    }
+    /*Header*/
+    .header-container::before {
+        display: none;
+    }
+    .burger {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+    }
+    .burger .line {
+        background-color: white;
+    }
+    .logo {
+        display: none;
+    }
+    .nav-links {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90vh;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navbar-container {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        width: auto;
+        background-color: white;
+        width: 50%;
+        transform: translateX(100%);
+    }
+
+    /*Hero*/
+    .hero-section {
+        flex-direction: column;
+    }
+    .hero-section::after {
+        display: none;
+    }
+    .hero-text {
+        width: 90%;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .hero-text button {
+        font-size: 16px;
+    }
+    .undraw {
+        width: 250px;
+        margin-top: 50px;
+    }
+    .hero-img {
+        justify-content: center;
+    }
+    .hero-container {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    /*Projects*/
+    .my-projects h1 {
+        margin-top: 20px;
+        text-align: center;
+        position: static;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project {
+        transform: scale(.9);
+    }
+    
+    /*Extra Info*/
+    .svg {
+        top: -90px;
+    }
+    .my-skills h1 {
+        font-size: 25px;
+    }
+    .skill-flex {
+        justify-content: space-around;
+    }
+    .skills {
+        font-size: 16px;
+        width: 40%;
+    }
+    .qualities {
+        font-size: 16px;
+        width: 40%;
+    }
+
+    /*Extra Info*/
+    .extra-info h1{
+        font-size: 20px;
+    }
+    .extra-info p {
+        font-size: 16px;
+    }
 }
