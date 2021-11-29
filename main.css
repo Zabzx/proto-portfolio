@@ -240,7 +240,16 @@ header {
     font-size: 40px;
 }
 .extra-info p {
-    font-size: 20px;
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+/*Footer*/
+footer {
+    height: 100px;
+}
+.contact-info {
+    margin-top: 50px;
 }
 
 /*Responsive*/
@@ -266,7 +275,7 @@ header {
     .nav-links {
         flex-direction: column;
         justify-content: space-around;
-        height: 90vh;
+        height: 100vh;
     }
     .main-nav ul {
         justify-content: space-around;
