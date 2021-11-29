@@ -275,7 +275,7 @@ footer {
     .nav-links {
         flex-direction: column;
         justify-content: space-around;
-        height: 90vh;
+        height: 100vh;
     }
     .main-nav ul {
         justify-content: space-around;
