@@ -21,6 +21,8 @@ burger.addEventListener('click', () => {
             line.style.backgroundColor = 'white'
             body.style.overflow = 'auto';
             html.style.overflow = 'auto';
+            body.style.overflowX = 'hidden';
+            html.style.overflowX = 'hidden'
         })
     }
 })
